@@ -8,9 +8,13 @@
 
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="../static/css/custom.css">
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
 
     <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/nameTemplate.js') }}"></script>
+
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/navbar.js') }}"></script>
     <title>STROM</title>
   </head>
   <body>
@@ -23,14 +27,20 @@
 
         <!-- Sidebar Links -->
         <ul class="list-unstyled components">
-            <li class="active"><a href="#">About</a></li>
+            <li class="active" target="_blank"><a href="http://www.tura.io">About</a></li>
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">My Stroms</a></li>
         </ul>
       </nav>
     </div>
-    
+
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+        <i class="glyphicon glyphicon-align-left"></i>
+        Toggle Sidebar
+    </button>
+
     <div class="container">
+
       <form class="form-inline">
         <div class="form-group">
           <label class="sr-only" for="nameInput">Name your template</label>
