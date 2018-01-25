@@ -21,7 +21,7 @@
     <title>STROM</title>
   </head>
   <body>
-    
+
     <div class="wrapper">
       <nav id="sidebar">
         <!-- Sidebar Header -->
@@ -47,24 +47,88 @@
 
       <div class="container">
           <div class="jumbotron">
-
           <form>
             <div class="form-group">
-              <label for="nameInput">Name D-stream</label>
-              <input type="text" class="form-control" id="nameInput" placeholder="eg:template1">
-          </div>
-            <div class="form-group">
-              <div class="dropdown" id="dataInput">
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Data Type
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Int</a></li>
-                  <li><a href="#">Float</a></li>
-                </ul>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="nameInput">Name D-stream</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="template1">
+                </div>
+                <div class="col-sm-6">
+                  <label for="descriptionInput">Description</label>
+                  <input type="text" class="form-control" id="descriptionInput" placeholder="template1 will ...">
+                </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="sourceInput">Stream source/s</label>
+                  <input type="text" class="form-control" id="sourceInput" placeholder="Mac Adress 08:00:27:e0..">
+                </div>
+                <div class="col-sm-6">
+                  <label for="sourceKeyInput">Source key</label>
+                  <input type="text" class="form-control" id="sourceKeyInput" placeholder="..specific source">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-3">
+                  <label for="measureInput">Measures</label>
+                  <input type="text" class="form-control" id="measureInput" placeholder="Measure1">
+                </div>
+                <div class="col-sm-3">
+                  <div class="dropdown" id="measureDataInput">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Data Type
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Int</a></li>
+                      <li><a href="#">Float</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <label for="filterInput">Filters</label>
+                  <input type="text" class="form-control" id="filterInput" placeholder="this will be a list of filters">
+                </div>
+                <div class="col-sm-3">
+                  <label for="derivativeParams">Derived params</label>
+                  <input type="text" class="form-control" id="derivativeParams" placeholder="..left, right">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-3">
+                  <label for="fieldInput">Fields</label>
+                  <input type="text" class="form-control" id="fieldInput" placeholder="add field">
+                </div>
+                <div class="col-sm-3">
+                  <div class="dropdown" id="storageInput">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Storage
+                      <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">raw</a></li>
+                      <li><a href="#">filtered</a></li>
+                      <li><a href="#">derivatived</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <label for="tagInput">Tag</label>
+                  <input type="text" class="form-control" id="tagInput" placeholder="this will be a list of filters">
+                </div>
+                <div class="col-sm-3">
+                  <label for="eventInput">Event</label>
+                  <input type="text" class="form-control" id="eventInput" placeholder="make device do something">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Set</button>
           </form>
+          <br><br>
           <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
           <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
         </div>
