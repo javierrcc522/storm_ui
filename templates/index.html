@@ -8,22 +8,56 @@
 
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    <!-- Custom Scroller Js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <link rel="stylesheet" href="../static/css/custom.css">
+
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
 
     <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/nameTemplate.js') }}"></script>
+
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/navbar.js') }}"></script>
     <title>STROM</title>
   </head>
   <body>
-    <div class="container">
-      <form class="form-inline">
-        <div class="form-group">
-          <label class="sr-only" for="nameInput">Name your template</label>
-          <input type="text" class="form-control" id="nameInput" placeholder="name">
+    <div class="wrapper">
+      <nav id="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>STROM</h3>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
-      <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+        <!-- Sidebar Links -->
+        <ul class="list-unstyled components">
+            <li><a href="http://www.tura.io">About</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">My Stroms</a></li>
+        </ul>
+      </nav>
+
+      <div id="content">
+        <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+      </div>
+
+      <div class="container">
+          <div class="jumbotron">
+
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="sr-only" for="nameInput">Name your template</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="name">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+          <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
