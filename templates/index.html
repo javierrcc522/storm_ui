@@ -21,6 +21,7 @@
     <title>STROM</title>
   </head>
   <body>
+    
     <div class="wrapper">
       <nav id="sidebar">
         <!-- Sidebar Header -->
@@ -47,10 +48,20 @@
       <div class="container">
           <div class="jumbotron">
 
-          <form class="form-inline">
+          <form>
             <div class="form-group">
-              <label class="sr-only" for="nameInput">Name your template</label>
-              <input type="text" class="form-control" id="nameInput" placeholder="name">
+              <label for="nameInput">Name D-stream</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="eg:template1">
+          </div>
+            <div class="form-group">
+              <div class="dropdown" id="dataInput">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Data Type
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Int</a></li>
+                  <li><a href="#">Float</a></li>
+                </ul>
+              </div>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
